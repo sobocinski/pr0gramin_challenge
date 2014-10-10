@@ -9,18 +9,70 @@
 import Foundation
 
 
-enum cardType: Character {
-    case BlackSpade = "\u{2660}"
-    case RedHeart = "\u{2665}"
-    case RedDiamond = "\u{2666}"
-    case BlackClub = "\u{2663}"
+
+func input() -> String {
+    var keyboard = NSFileHandle.fileHandleWithStandardInput()
+    var inputData = keyboard.availableData
+    var input = NSString(data: inputData, encoding:NSUTF8StringEncoding)!
+    input = input.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    return input;
 }
 
-let cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+func help() {
+    println("------ MENU ------")
+    println("1 - Play")
+    println("9 - Help")
+    println("0 - End")
+    println("------      ------")
+
+}
+
+func play() {
+    let card = Card(color: Card.randCardType())
+    println("Computer card: \(card)")
+    println("Your option: higher(h), lower (l) the same (s)");
+    let userOption = input();
+    switch userOption {
+        case "h", "l", "s":
+            let newCard = Card(color: Card.randCardType())
+            let status = card.compare(userOption, comparedCard: newCard)
+            printStatus(status)
+        default:
+            println("Unknown status")
+            help()
+    }
+    
+    
+}
+
+func printStatus(status: Bool) {
+    if(status) {
+        println("YOU WIN :D")
+    }
+    else {
+        println("YOU LOSE :(")
+    }
+}
+
+var work = true
+help()
+while(work) {
+    var userInput:String = input()
+    switch userInput {
+        case "1":
+            play()
+        case "9":
+            help()
+        default:
+            work = false
+    }
+}
+
+
+let card = Card(color: Card.randCardType())
 
 
 
 
-
-println(cardType)
+println(card)
 
