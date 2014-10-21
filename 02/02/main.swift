@@ -13,5 +13,9 @@ import Foundation
 
 
 
-var deg = Degrees(3.1)
-println("Degrees \(deg)")
+var deg = Degrees(0.0)
+println("Degrees C \(deg)")
+deg.type = Types.Kelvin
+println("Degrees K \(deg)")
+deg.type = Types.Fahrenheit
+println("Degrees F \(deg)")

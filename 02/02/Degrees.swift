@@ -12,7 +12,7 @@ import Foundation
 struct Degrees : Printable {
    
     var type: Types
-    //alway in
+    //alway in Celc
     var temp: Double
 
     var temperature: Double {
