@@ -8,7 +8,12 @@
 
 import Foundation
 
-var x = FizzBuzz(234);
+var coder = Coder()
+let oryginal = "Pawel Sobocinski"
+let coded = coder.code(oryginal)
+let decoded = coder.decode(coded)
 
-println(x)
+println("Oryginal: \(oryginal)")
+println("Coded: \(coded)")
+println("Decoded: \(decoded)")
 

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E586C07319F6AA1900323E02 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586C07219F6AA1900323E02 /* main.swift */; };
-		E586C07A19F6AA2C00323E02 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586C07919F6AA2C00323E02 /* Coder.swift */; };
+		E586C04719F6990200323E02 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586C04619F6990200323E02 /* main.swift */; };
+		E586C04E19F6991200323E02 /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586C04D19F6991200323E02 /* FizzBuzz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E586C06D19F6AA1900323E02 /* CopyFiles */ = {
+		E586C04119F6990100323E02 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,13 +24,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E586C06F19F6AA1900323E02 /* 04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 04; sourceTree = BUILT_PRODUCTS_DIR; };
-		E586C07219F6AA1900323E02 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		E586C07919F6AA2C00323E02 /* Coder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
+		E586C04319F6990100323E02 /* 04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 04; sourceTree = BUILT_PRODUCTS_DIR; };
+		E586C04619F6990200323E02 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E586C04D19F6991200323E02 /* FizzBuzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E586C06C19F6AA1900323E02 /* Frameworks */ = {
+		E586C04019F6990100323E02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,27 +40,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E586C06619F6AA1900323E02 = {
+		E586C03A19F6990100323E02 = {
 			isa = PBXGroup;
 			children = (
-				E586C07119F6AA1900323E02 /* 04 */,
-				E586C07019F6AA1900323E02 /* Products */,
+				E586C04519F6990100323E02 /* 04 */,
+				E586C04419F6990100323E02 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E586C07019F6AA1900323E02 /* Products */ = {
+		E586C04419F6990100323E02 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E586C06F19F6AA1900323E02 /* 04 */,
+				E586C04319F6990100323E02 /* 04 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E586C07119F6AA1900323E02 /* 04 */ = {
+		E586C04519F6990100323E02 /* 04 */ = {
 			isa = PBXGroup;
 			children = (
-				E586C07219F6AA1900323E02 /* main.swift */,
-				E586C07919F6AA2C00323E02 /* Coder.swift */,
+				E586C04619F6990200323E02 /* main.swift */,
+				E586C04D19F6991200323E02 /* FizzBuzz.swift */,
 			);
 			path = 04;
 			sourceTree = "<group>";
@@ -68,13 +68,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E586C06E19F6AA1900323E02 /* 04 */ = {
+		E586C04219F6990100323E02 /* 04 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E586C07619F6AA1900323E02 /* Build configuration list for PBXNativeTarget "04" */;
+			buildConfigurationList = E586C04A19F6990200323E02 /* Build configuration list for PBXNativeTarget "04" */;
 			buildPhases = (
-				E586C06B19F6AA1900323E02 /* Sources */,
-				E586C06C19F6AA1900323E02 /* Frameworks */,
-				E586C06D19F6AA1900323E02 /* CopyFiles */,
+				E586C03F19F6990100323E02 /* Sources */,
+				E586C04019F6990100323E02 /* Frameworks */,
+				E586C04119F6990100323E02 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -82,54 +82,54 @@
 			);
 			name = 04;
 			productName = 04;
-			productReference = E586C06F19F6AA1900323E02 /* 04 */;
+			productReference = E586C04319F6990100323E02 /* 04 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E586C06719F6AA1900323E02 /* Project object */ = {
+		E586C03B19F6990100323E02 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Paweł Sobociński";
 				TargetAttributes = {
-					E586C06E19F6AA1900323E02 = {
+					E586C04219F6990100323E02 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
-			buildConfigurationList = E586C06A19F6AA1900323E02 /* Build configuration list for PBXProject "04" */;
+			buildConfigurationList = E586C03E19F6990100323E02 /* Build configuration list for PBXProject "04" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E586C06619F6AA1900323E02;
-			productRefGroup = E586C07019F6AA1900323E02 /* Products */;
+			mainGroup = E586C03A19F6990100323E02;
+			productRefGroup = E586C04419F6990100323E02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E586C06E19F6AA1900323E02 /* 04 */,
+				E586C04219F6990100323E02 /* 04 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E586C06B19F6AA1900323E02 /* Sources */ = {
+		E586C03F19F6990100323E02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E586C07319F6AA1900323E02 /* main.swift in Sources */,
-				E586C07A19F6AA2C00323E02 /* Coder.swift in Sources */,
+				E586C04719F6990200323E02 /* main.swift in Sources */,
+				E586C04E19F6991200323E02 /* FizzBuzz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E586C07419F6AA1900323E02 /* Debug */ = {
+		E586C04819F6990200323E02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -170,7 +170,7 @@
 			};
 			name = Debug;
 		};
-		E586C07519F6AA1900323E02 /* Release */ = {
+		E586C04919F6990200323E02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -204,14 +204,14 @@
 			};
 			name = Release;
 		};
-		E586C07719F6AA1900323E02 /* Debug */ = {
+		E586C04B19F6990200323E02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E586C07819F6AA1900323E02 /* Release */ = {
+		E586C04C19F6990200323E02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -221,24 +221,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E586C06A19F6AA1900323E02 /* Build configuration list for PBXProject "04" */ = {
+		E586C03E19F6990100323E02 /* Build configuration list for PBXProject "04" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E586C07419F6AA1900323E02 /* Debug */,
-				E586C07519F6AA1900323E02 /* Release */,
+				E586C04819F6990200323E02 /* Debug */,
+				E586C04919F6990200323E02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E586C07619F6AA1900323E02 /* Build configuration list for PBXNativeTarget "04" */ = {
+		E586C04A19F6990200323E02 /* Build configuration list for PBXNativeTarget "04" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E586C07719F6AA1900323E02 /* Debug */,
-				E586C07819F6AA1900323E02 /* Release */,
+				E586C04B19F6990200323E02 /* Debug */,
+				E586C04C19F6990200323E02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E586C06719F6AA1900323E02 /* Project object */;
+	rootObject = E586C03B19F6990100323E02 /* Project object */;
 }
