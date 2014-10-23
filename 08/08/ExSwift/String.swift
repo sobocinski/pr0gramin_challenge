@@ -63,14 +63,6 @@ public extension String {
 
         return nil
     }
-    
-    subscript (indexx: Double) -> Character? {
-        if let char = Array(self).get(Int(indexx)) {
-            return char
-        }
-        
-        return nil
-    }
 
     /**
         Takes a list of indexes and returns an Array containing the elements at the given indexes in self.

@@ -13,60 +13,79 @@ import Foundation
 class Game : UIView {
     var faileds = 0
     var originalFrame = CGRectZero
+    var referenceView: UIView!
     let π = 3.14159
     let letter: String = String.random(length: 10)
+    var score = 0
     
-
     
+        
     required init(coder: NSCoder) {
         super.init(coder: coder)
+        
+        println(self.frame)
+        
+        setup()
+
     }
+    
     
     init(frame: CGRect, referenceView: UIView) {
         self.originalFrame = frame
-        
+        self.referenceView = referenceView
         super.init(frame: referenceView.frame)
- 
+        
+        clipsToBounds = false
         backgroundColor = UIColor.clearColor()
         setup()
-
+    }
+    
+    func hasLetter(lokingLetter: Character) -> Bool {
+        var has = false
+        for l in self.letter {
+            if l == lokingLetter {
+                has = true
+                break
+            }
+        }
+        
+        return has
     }
     
     func degrees(deg: Double) -> CGFloat {
         return CGFloat (deg*π)/180.0
     }
+    
+    func fail() -> Bool {
+        self.faileds++
+        
+        switch faileds {
+        case 1:
+            self.step1()
+        case 2:
+            self.step2()
+        case 3:
+            self.step3()
+        case 4:
+            self.step4()
+        case 5:
+            self.step5()
+        case 6:
+            self.step6()
+        case 7:
+            self.step7()
+        case 8:
+            self.step8()
+        case 9:
+            self.step9()
+        default: //10
+            self.step10()
+            return true
+        }
+        return false
+    }
 
     func setup() {
-        delay(1.0) {
-            self.step1()
-        }
-        delay(2.0) {
-        self.step2()
-        }
-        delay(3.0) {
-        self.step3()
-        }
-        delay(4.0) {
-        self.step4()
-        }
-        delay(5.0) {
-        self.step5()
-        }
-        delay(6.0) {
-        self.step6()
-        }
-        delay(7.0) {
-        self.step7()
-        }
-        delay(8.0) {
-       self.step8()
-        }
-        delay(9.0) {
-        self.step9()
-        }
-        delay(10.0) {
-        self.step10()
-        }
       
     }
     
@@ -79,7 +98,7 @@ class Game : UIView {
         )
         var rect = UIView(frame: frame)
         rect.backgroundColor = UIColor.blackColor()
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     func step2() {
@@ -91,7 +110,7 @@ class Game : UIView {
         )
         var rect = UIView(frame: frame)
         rect.backgroundColor = UIColor.blackColor()
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     func step3() {
@@ -103,7 +122,7 @@ class Game : UIView {
         )
         var rect = UIView(frame: frame)
         rect.backgroundColor = UIColor.blackColor()
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
         
         let frame2 = CGRectMake(
             44,
@@ -115,7 +134,7 @@ class Game : UIView {
         rect2.backgroundColor = UIColor.blackColor()
         
         rect2.transform = CGAffineTransformMakeRotation(40)
-        self.addSubview(rect2)
+        self.referenceView.addSubview(rect2)
     }
     
     func step4() {
@@ -127,7 +146,7 @@ class Game : UIView {
         )
         var rect = UIView(frame: frame)
         rect.backgroundColor = UIColor.blackColor()
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     
@@ -140,7 +159,7 @@ class Game : UIView {
         )
         var rect = UIView(frame: frame)
         rect.backgroundColor = UIColor.blackColor()
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     func step6() {
@@ -152,7 +171,7 @@ class Game : UIView {
         )
         var rect = UIView(frame: frame)
         rect.backgroundColor = UIColor.blackColor()
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
         
         let frame2 = CGRectMake(
             120,
@@ -162,7 +181,7 @@ class Game : UIView {
         )
         var rect2 = UIView(frame: frame2)
         rect2.backgroundColor = UIColor.blackColor()
-        self.addSubview(rect2)
+        self.referenceView.addSubview(rect2)
 
     }
     
@@ -177,7 +196,7 @@ class Game : UIView {
         rect.backgroundColor = UIColor.blackColor()
         
         rect.transform = CGAffineTransformMakeRotation(self.degrees(6.0))
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     func step8() {
@@ -191,7 +210,7 @@ class Game : UIView {
         rect.backgroundColor = UIColor.blackColor()
         
         rect.transform = CGAffineTransformMakeRotation(self.degrees(354.0))
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     func step9() {
@@ -205,7 +224,7 @@ class Game : UIView {
         rect.backgroundColor = UIColor.blackColor()
         
         rect.transform = CGAffineTransformMakeRotation(self.degrees(23.0))
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     func step10() {
@@ -219,7 +238,7 @@ class Game : UIView {
         rect.backgroundColor = UIColor.blackColor()
         
         rect.transform = CGAffineTransformMakeRotation(self.degrees(337.0))
-        self.addSubview(rect)
+        self.referenceView.addSubview(rect)
     }
     
     func delay(seconds: Double, block: () -> ()) {

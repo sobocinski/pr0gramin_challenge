@@ -15,12 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var letter: UITextField!
     @IBOutlet weak var word: UILabel!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var gameView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
         setup()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,9 +31,27 @@ class ViewController: UIViewController {
     }
 
     @IBAction func press(sender: AnyObject) {
-        let letter = self.letter.text[0]
-        println(letter)
+        if self.letter.text.length > 0 {
+            var char: Character = self.letter.text[0.0]!
+            
+            if game.hasLetter(char) {
+                //bug here = same letter give extra point
+                game.score++
+                scoreLabel.text = String(game.score)
+            }
+            else {
+                if game.fail() {
+                    scoreLabel.textColor = UIColor.redColor()
+                    scoreLabel.text = "Game over!!!"
+                }
+            }
+        }
+        
+        
+        
     }
+    
+    
     
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
@@ -40,19 +60,9 @@ class ViewController: UIViewController {
         return true;
     }
     func setup() {
-        let width: CGFloat = 200.0
-        let height: CGFloat = 300.0
-        let ropeFrame = CGRectMake(
-            0,
-            0,
-            width,
-            height)
         
-        self.game = Game(frame: ropeFrame, referenceView: view)
-        view.addSubview(self.game)
-        
-        
-        self.word.text = self.game.letter
+        self.game = Game(frame: self.gameView.frame, referenceView: self.gameView)
+        word.text = game.letter
     }
 
 }

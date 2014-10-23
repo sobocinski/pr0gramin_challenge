@@ -35,6 +35,11 @@ public extension String {
 
         return self[range]
     }
+    
+    func replace(target: String, withString: String) -> String?
+    {
+        return self.stringByReplacingOccurrencesOfString(target, withString: withString, options: NSStringCompareOptions.LiteralSearch, range: nil)
+    }
 
     /**
         Equivalent to at. Takes a list of indexes and returns an Array
@@ -61,14 +66,6 @@ public extension String {
             return String(char)
         }
 
-        return nil
-    }
-    
-    subscript (indexx: Double) -> Character? {
-        if let char = Array(self).get(Int(indexx)) {
-            return char
-        }
-        
         return nil
     }
 
